@@ -1,0 +1,102 @@
+{
+  "netvars": {
+    "m_iHealth": 256,
+    "m_iTeamNum": 244,
+    "m_iGlowIndex": 42040,
+    "m_bDormant": 237,
+    "m_fFlags": 260,
+    "m_clrRender": 112,
+    "m_vecOrigin": 312,
+    "m_vecVelocity": 276,
+    "m_dwViewAngles": 12760,
+    "m_vecViewOffset": 264,
+    "m_dwBoneMatrix": 9896,
+    "m_iShotsFired": 41872,
+    "m_vecPunch": -1,
+    "m_flFlashMaxAlpha": 42012,
+    "m_iCrosshairId": 46052
+  },
+
+  "signatures": {
+    "m_dwLocalPlayer": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 3,
+      "address_offset": 4,
+      "pattern": "8D 34 85 ? ? ? ? 89 15 ? ? ? ? 8B 41 08 8B 48 04 83 F9 FF"
+    },
+    "m_dwEntityList": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 1,
+      "address_offset": 0,
+      "pattern": "BB ? ? ? ? 83 FF 01 0F 8C ? ? ? ? 3B F8"
+    },
+    "m_dwGlowObjectManager": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 1,
+      "address_offset": 4,
+      "pattern": "A1 ? ? ? ? A8 01 75 4B"
+    },
+    "dwClientState": {
+      "module": "engine.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 1,
+      "address_offset": 0,
+      "pattern": "A1 ? ? ? ? 33 D2 6A 00 6A 00 33 C9 89 B0"
+    },
+    "dwClientState_ViewAngles": {
+      "module": "engine.dll",
+      "mode_read": true,
+      "mode_subtract": false,
+      "pattern_offset": 4,
+      "address_offset": 0,
+      "pattern": "F3 0F 11 80 ? ? ? ? D9 46 04 D9 05"
+    },
+    "dwbSendPackets": {
+      "module": "engine.dll",
+      "mode_read": false,
+      "mode_subtract": true,
+      "pattern_offset": 1,
+      "address_offset": 0,
+      "pattern": "B3 01 8B 01 8B 40 10 FF D0 84 C0 74 0F 80 BF ? ? ? ? ? 0F 84"
+    },
+    "dwRadarBase": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 1,
+      "address_offset": 0,
+      "pattern": "A1 ? ? ? ? 8B 0C B0 8B 01 FF 50 ? 46 3B 35 ? ? ? ? 7C EA 8B 0D"
+    },
+    "dwViewMatrix": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 3,
+      "address_offset": 176,
+      "pattern": "0F 10 05 ? ? ? ? 8D 85 ? ? ? ? B9"
+    },
+    "dwForceJump": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 2,
+      "address_offset": 0,
+      "pattern": "8B 0D ? ? ? ? 8B D6 8B C1 83 CA 02"
+    },
+    "dwForceAttack": {
+      "module": "client.dll",
+      "mode_read": true,
+      "mode_subtract": true,
+      "pattern_offset": 2,
+      "address_offset": 0,
+      "pattern": "89 0D ? ? ? ? 8B 0D ? ? ? ? 8B F2 8B C1 83 CE 04"
+    }
+  }
+}
