@@ -15,7 +15,8 @@
     "m_vecPunch": -1,
     "m_flFlashMaxAlpha": 42012,
     "m_iCrosshairId": 46056,
-    "m_bBombTicking": 10624
+    "m_bBombTicking": 10624,
+    "m_bSpotted": 2365
   },
 
   "signatures": {
